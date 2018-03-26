@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>D.J. Trinity</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Core Meta Data -->
+	<meta name="author" content="Matthew Wagerfield">
+	<meta name="description" content="Trinity is the perfect blend of all the areas of an engineering student's life- sports, cultural activities and a technical thinking. With a dazzling past in its wake, Trinity is back. And this time, its not just going to be better, its going to be the best!p">
+	<meta name="keywords" content="">
+
+	
+	<!-- Humans -->
+	<link rel="author" href="humans.txt" />
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<style type="text/css">
+		canvas {
+  position: absolue;
+}
+	</style>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/fav.ico">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+	<div id="fb-root"></div>
+	<div id="container" class="wrapper">
+		<ul id="scene" class="scene unselectable"
+			data-friction-x="0.1"
+			data-friction-y="0.1"
+			data-scalar-x="25"
+			data-scalar-y="15">
+			<li class="layer" data-depth="0.00"></li>
+			<li class="layer" data-depth="0.10"><!-- <div class="background"></div> -->
+				<!-- <canvas></canvas> -->
+				<div id="particles" class="background"> </div>
+	
+			</li>
+			<!-- <li class="layer" data-depth="0.10"><div class="light orange b phase-4"></div></li>
+			<li class="layer" data-depth="0.10"><div class="light purple c phase-5"></div></li>
+			<li class="layer" data-depth="0.10"><div class="light orange d phase-3"></div></li> -->
+			<!-- <li class="layer" data-depth="0.15">
+				<ul class="rope depth-10">
+					<li><img src="images/rope.png" alt="Rope"></li>
+					<li class="hanger position-2">
+						<div class="board cloud-2 swing-1"></div>
+					</li>
+					<li class="hanger position-4">
+						<div class="board cloud-1 swing-3"></div>
+					</li>
+					<li class="hanger position-8">
+						<div class="board birds swing-5"></div>
+					</li>
+				</ul>
+			</li> -->
+			<li class="layer" data-depth="0.20" style="display: flex;height: 100vh">
+				<!-- <h1 class="title">Trinity</h1> -->
+				<img src="images/logo.png" class="logo" data-depth="0.2">
+				
+
+			</li>
+			<!-- <li class="layer" data-depth="0.30">
+				<ul class="rope depth-30">
+					<li><img src="images/rope.png" alt="Rope"></li>
+					<li class="hanger position-1">
+						<div class="board cloud-1 swing-3"></div>
+					</li>
+					<li class="hanger position-5">
+						<div class="board cloud-4 swing-1"></div>
+					</li>
+				</ul>
+			</li> -->
+			<!-- <li class="layer" data-depth="0.30"><div class="wave plain  depth-30"></div></li>
+			<li class="layer" data-depth="0.40"><div class="wave plain depth-50"></div></li>
+			 -->
+
+			<!-- <li class="layer" data-depth="1.0"><div class="wave plain depth-80"></div></li>
+			 -->
+			<!-- <li class="layer" data-depth="0.60"><div class="lighthouse depth-60"></div></li>
+			 --> 
+			 <!-- <li class="layer" data-depth="0.60">
+				<ul class="rope depth-60">
+					<li><img src="images/rope.png" alt="Rope"></li>
+					<li class="hanger position-3">
+						<div class="board birds swing-5"></div>
+					</li>
+					<li class="hanger position-6">
+						<div class="board cloud-2 swing-2"></div>
+					</li>
+					<li class="hanger position-8">
+						<div class="board cloud-3 swing-4"></div>
+					</li>
+				</ul>
+			</li> -->
+		<!-- 	<li class="layer" data-depth="0.60"><div class="wave plain depth-60"></div></li>
+			<li class="layer" data-depth="0.80"><div class="wave plain depth-80"></div></li>
+			<li class="layer" data-depth="1.00"><div class="wave paint depth-100"></div></li>
+		 --></ul>
+		<section id="about" class="wrapper about hide accelerate">
+			<div class="cell accelerate">
+				<div class="cables center accelerate">
+					<div class="panel accelerate">
+						<header>
+							<h1><em style="color: #00BFFF;text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);font-size:4rem">D.J. Trinity</em></h1>
+						</header>
+						<p><strong>Trinity</strong> is the perfect blend of all the areas of an engineering student's life- sports, cultural activities and a technical thinking. With a dazzling past in its wake, <strong>Trinity</strong> is back. And this time, its not just going to be better, its going to be the best!</p>
+						
+						<ul class="links">
+							<li><a>About Us</a></li>
+							<li><a>IDPT Table</a></li>
+							<li><a>Events</a></li>
+							<li><a>Sponsors</a></li>
+							<li><a>Team</a></li>
+							<li><a>Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- 	<button id="toggle" class="toggle i">
+			<div class="cross">
+				<div class="x"></div>
+				<div class="y"></div>
+			</div>
+		</button>
+		<div id="prompt" class="wrapper prompt hide accelerate">
+			<div class="cell accelerate">
+				<div class="panel center unselectable accelerate">
+					<button id="dismiss" class="dismiss">
+						<div class="cross">
+							<div class="x"></div>
+							<div class="y"></div>
+						</div>
+					</button>
+					<div class="tilt-scene">
+						<img class="tilt" src="images/tilt.png">
+					</div>
+					<h2>Tilting is fun!</h2>
+					<p>For the best experience, check out this site on a mobile or tablet equipped with a gyroscope</p>
+					<p>(iPads are the coolest)</p>
+				</div>
+			</div>
+		</div> -->
+		<!-- <footer>
+			<div class="fb-like" data-href="http://wagerfield.github.io/parallax/" data-width="400" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://wagerfield.github.io/parallax/" data-text="Tilting is fun! Check out #parallax.js by @wagerfield & @claudioguglieri »">Tweet</a>
+		</footer> -->
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="js/jquery.parallax.js"></script>
+	<script src="js/libraries.js"></script>
+	<script src="js/jquery.particleground.js"></script>
+	<script>
+
+	// jQuery Selections
+	var $html = $('html'),
+			$container = $('#container'),
+			$prompt = $('#prompt'),
+			$toggle = $('#toggle'),
+			$about = $('#about'),
+			$scene = $('#scene');
+
+	// Hide browser menu.
+	(function() {
+		setTimeout(function(){window.scrollTo(0,0);},0);
+	})();
+
+	// Setup FastClick.
+	FastClick.attach(document.body);
+
+	// Add touch functionality.
+	if (Hammer.HAS_TOUCHEVENTS) {
+		$container.hammer({drag_lock_to_axis: true});
+		_.tap($html, 'a,button,[data-tap]');
+	}
+
+	// Add touch or mouse class to html element.
+	$html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
+
+	// Resize handler.
+	(resize = function() {
+		$scene[0].style.width = window.innerWidth + 'px';
+		$scene[0].style.height = window.innerHeight + 'px';
+		if (!$prompt.hasClass('hide')) {
+			if (window.innerWidth < 600) {
+				$toggle.addClass('hide');
+			} else {
+				$toggle.removeClass('hide');
+			}
+		}
+	})();
+
+	// Attach window listeners.
+	window.onresize = _.debounce(resize, 200);
+	window.onscroll = _.debounce(resize, 200);
+
+	function showDetails() {
+		$about.removeClass('hide');
+		$toggle.removeClass('i');
+	}
+
+	function hideDetails() {
+		$about.addClass('hide');
+		$toggle.addClass('i');
+	}
+
+	// Listen for toggle click event.
+	$toggle.on('click', function(event) {
+		$toggle.hasClass('i') ? showDetails() : hideDetails();
+	});
+
+	// Pretty simple huh?
+	$scene.parallax();
+
+	// Check for orientation support.
+	setTimeout(function() {
+		if ($scene.data('mode') === 'cursor') {
+			$prompt.removeClass('hide');
+			if (window.innerWidth < 600) $toggle.addClass('hide');
+			$prompt.on('click', function(event) {
+				$prompt.addClass('hide');
+				if (window.innerWidth < 600) {
+					setTimeout(function() {
+						$toggle.removeClass('hide');
+					},1200);
+				}
+			});
+		}
+	},1000);
+
+	</script>
+	<script type="text/javascript">
+		// jQuery plugin example:
+$(document).ready(function() {
+  $('#particles').particleground({
+    dotColor: '#fff',
+    lineColor: '#5cbdaa'
+  });
+  $('.intro').css({
+    'margin-top': -($('.intro').height() / 2)
+  });
+});
+
+	</script>
+    <!--script>
+//CANVAS
+$(function(){
+  var canvas = document.querySelector('canvas'),
+      ctx = canvas.getContext('2d')
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx.lineWidth = .3;
+  ctx.strokeStyle = (new Color(150)).style;
+
+  var mousePosition = {
+    x: 30 * canvas.width / 100,
+    y: 30 * canvas.height / 100
+  };
+
+  var dots = {
+    nb: 1500,
+    distance: 50,
+    d_radius: 100,
+    array: []
+  };
+
+  function colorValue(min) {
+    return Math.floor(Math.random() * 255 + min);
+  }
+  
+  function createColorStyle(r,g,b) {
+    return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
+  }
+  
+  function mixComponents(comp1, weight1, comp2, weight2) {
+    return (comp1 * weight1 + comp2 * weight2) / (weight1 + weight2);
+  }
+  
+  function averageColorStyles(dot1, dot2) {
+    var color1 = dot1.color,
+        color2 = dot2.color;
+    
+    var r = mixComponents(color1.r, dot1.radius, color2.r, dot2.radius),
+        g = mixComponents(color1.g, dot1.radius, color2.g, dot2.radius),
+        b = mixComponents(color1.b, dot1.radius, color2.b, dot2.radius);
+    return createColorStyle(Math.floor(r), Math.floor(g), Math.floor(b));
+  }
+  
+  function Color(min) {
+    min = min || 0;
+    this.r = 255;//colorValue(min);
+    this.g = 255;//colorValue(min);
+    this.b = 255;//colorValue(min);
+    this.style = createColorStyle(this.r, this.g, this.b);
+  }
+
+  function Dot(){
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+
+    this.vx = -.5 + Math.random();
+    this.vy = -.5 + Math.random();
+
+    this.radius = Math.random() * 2;
+
+    this.color = new Color();
+    console.log(this);
+  }
+
+  Dot.prototype = {
+    draw: function(){
+      ctx.beginPath();
+      ctx.fillStyle = this.color.style;
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+      ctx.fill();
+    }
+  };
+
+  function createDots(){
+    for(i = 0; i < dots.nb; i++){
+      dots.array.push(new Dot());
+    }
+  }
+
+  function moveDots() {
+    for(i = 0; i < dots.nb; i++){
+
+      var dot = dots.array[i];
+
+      if(dot.y < 0 || dot.y > canvas.height){
+        dot.vx = dot.vx;
+        dot.vy = - dot.vy;
+      }
+      else if(dot.x < 0 || dot.x > canvas.width){
+        dot.vx = - dot.vx;
+        dot.vy = dot.vy;
+      }
+      dot.x += dot.vx;
+      dot.y += dot.vy;
+    }
+  }
+
+  // function connectDots() {
+  //   for(i = 0; i < dots.nb; i++){
+  //     for(j = 0; j < dots.nb; j++){
+  //       i_dot = dots.array[i];
+  //       j_dot = dots.array[j];
+
+  //       if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
+  //         if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
+  //           ctx.beginPath();
+  //           ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
+  //           ctx.moveTo(i_dot.x, i_dot.y);
+  //           ctx.lineTo(j_dot.x, j_dot.y);
+  //           ctx.stroke();
+  //           ctx.closePath();
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  function drawDots() {
+    for(i = 0; i < dots.nb; i++){
+      var dot = dots.array[i];
+      dot.draw();
+    }
+  }
+
+  function animateDots() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    moveDots();
+    //connectDots();
+    drawDots();
+
+    requestAnimationFrame(animateDots);	
+  }
+
+  $('canvas').on('mousemove', function(e){
+    mousePosition.x = e.pageX;
+    mousePosition.y = e.pageY;
+  });
+
+  $('canvas').on('mouseleave', function(e){
+    mousePosition.x = canvas.width / 2;
+    mousePosition.y = canvas.height / 2;
+  });
+
+  createDots();
+  requestAnimationFrame(animateDots);	
+});
+        $(document).ready(spinButton);
+$(window).resize(spinButton);
+
+    </script-->
+</body>
+</html>

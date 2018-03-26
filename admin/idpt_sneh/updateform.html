@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPDATE FORM</title>
+	<style> 
+input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    color: white;
+}
+</style>
+
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+
+<script type="text/javascript">
+	
+	document.getElementById("myButton").onclick = function () {
+        
+    
+    var sit = document.getElementById("it").value;
+    var scomps = document.getElementById("comps").value;
+    var smech = document.getElementById("mech").value;
+    var sbioprod = document.getElementById("bioprod").value;
+    var sextc = document.getElementById("extc").value;
+    var selex = document.getElementById("elex").value;
+    var schemical = document.getElementById("chemical").value;
+
+    sessionStorage.setItem('it','sit');
+	sessionStorage.setItem('comps','scomps');
+	sessionStorage.setItem('extc','sextc');
+	sessionStorage.setItem('elex','selex');
+	sessionStorage.setItem('bioprod','sbioprod');
+	sessionStorage.setItem('mech','smech');
+	sessionStorage.setItem('chemical','schemical');
+
+
+    location.href("chart.html");
+
+    };
+
+}
+</script>
+</head>
+<body>
+
+<formn action="chart.html" method="GET">
+<center>
+<table>
+<tr>
+	<td><label for="fname">I.t</label></td>
+  <td><input type="text" id="it" name="it" value="" style="background-color:#FFC0CB"></td>
+</tr>
+  
+  <tr>
+	<td><label for="fname">Comps</label></td>
+  <td><input type="text" id="comps" name="comps" value="" style="background-color:#FFC0CB"></td>
+</tr>
+
+<tr>
+	<td><label for="fname">Mech</label></td>
+  <td><input type="text" id="mech" name="mech" value="" style="background-color:#FFC0CB"></td>
+</tr>
+
+<tr>
+	<td><label for="fname">Chemical</label></td>
+  <td><input type="text" id="chemical" name="chemical" value="" style="background-color:#FFC0CB"></td>
+</tr>
+
+<tr>
+	<td><label for="fname">Extc</label></td>
+  <td><input type="text" id="extc" name="extc" value="" style="background-color:#FFC0CB"></td>
+</tr>
+
+<tr>
+	<td><label for="fname">Elex</label></td>
+  <td><input type="text" id="elex" name="elex" value="" style="background-color:#FFC0CB"></td>
+</tr>
+
+<tr>
+	<td><label for="fname">Bio-Prod</label></td>
+  <td><input type="text" id="bioprod" name="bioprod" value="" style="background-color:#FFC0CB"></td>
+</tr>
+
+
+  
+</table>
+<br>
+
+<input type="Submit" class="button button2" value="Submit" onclick="location.href = 'chart.html?it=';" id="myButton">
+
+</center>
+</form>
+
+<script type="text/javascript">
+	
+	
+</script>
+
+</body>
+</html>
